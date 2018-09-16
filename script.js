@@ -26,7 +26,6 @@ let nextNextInt = window.setInterval(function() {
 
 }, 4000)
 
-
 let nextint = window.setInterval(function() {
   //check for and remove first class
   if (tests.classList.contains('first')) {
@@ -73,7 +72,6 @@ next.addEventListener("click", function() {
 //third dot click
 nextNext.addEventListener("click", function() {
 
-
   if (tests.classList.contains('second')) {
     tests.classList.remove('second');
   }
@@ -106,3 +104,60 @@ prev.addEventListener("click", function() {
 })
 
 ////////////////// end of testimonial section
+/////////////FAQ accordion section///////////////
+
+//delcare default vars
+const acc = document.getElementsByClassName("accordion");
+
+//loop through all accordion buttons
+for (let i = 0; i < acc.length; i++) {
+
+  //trigger an event after click
+  acc[i].addEventListener("click", function() {
+
+    //add in the active class
+    this.classList.toggle("active");
+    //select sibling element
+    let panel = this.nextElementSibling;
+    //if sibling is open, close it, if closed, open it
+    if (panel.style.maxHeight) {
+      //panel is open open
+      panel.style.maxHeight = null;
+
+    } else {
+      //panel is closed
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+/////////popup//////////////
+
+//declare default vars
+const popUp = document.getElementById('pop-up');
+const popUpLayer = document.getElementById('pop-up-layer');
+const closeModal = document.getElementById('close-pop-up');
+
+//nav-bar button
+const subBtn = document.getElementById('sub-btn');
+
+//navbar button click makes the popup appear
+subBtn.addEventListener("click", () => {
+  popUpLayer.style.display = 'flex';
+})
+
+//close model click makes the popup disappear
+closeModal.addEventListener("click", function() {
+  popUpLayer.style.display = 'none';
+})
+
+let popUpSeconds = 40;
+
+//trigger popup after seconds variable
+let popUpFun = window.setInterval(function() {
+  popUpLayer.style.display = 'flex';
+
+  window.clearInterval(popUpFun);
+
+}, popUpSeconds * 1000);
+
+///////////////////

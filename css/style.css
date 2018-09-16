@@ -1,11 +1,12 @@
 body {
   margin: 0;
+  /*add this line below*/
+  overflow-x: hidden;
 }
 
 /***********
 NAVBAR
 ***********/
-
 .navbar {
   z-index: 10;
   width: 100%;
@@ -53,11 +54,10 @@ NAVBAR
 /*******************
 HERO
 *******************/
-
 .hero {
   height: calc(99vh - 50px);
   width: 100%;
-  background: linear-gradient(rgba(44, 62, 80,.3), rgba(44, 62, 80,.3)), url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(44, 62, 80, .3), rgba(44, 62, 80, .3)), url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -91,18 +91,17 @@ HERO
   width: 15rem;
   text-align: center;
   transition: all 200ms;
-  box-shadow: 0 2px 0px rgba(0,0,0,.3);
+  box-shadow: 0 2px 0px rgba(0, 0, 0, .3);
 }
 
 .call-to-action-btn:hover {
   /*transform: scale(1.02);*/
-  box-shadow: 0 2px 1px rgba(0,0,0,.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .3);
 }
 
 /*******************
 clients
 *******************/
-
 .clients {
   height: 10rem;
   width: 100%;
@@ -137,11 +136,10 @@ clients
 /******************
 subscribe
 ******************/
-
 .subscribe {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -202,8 +200,6 @@ subscribe
 /*******************
 gallery
 *******************/
-
-
 .gallery-sec {
   /*padding: .3rem;*/
   margin-right: .3rem;
@@ -245,27 +241,25 @@ gallery
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  box-shadow: 1px 2px 6px rgba(0,0,0,.3);
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, .3);
   transition: all 300ms;
   transform-style: preserve-3d;
   background-size: cover;
   background-position: center;
 }
 
-
 .tall-panel {
   grid-row-end: span 2;
 }
 
-.g-header
- {
+.g-header {
   margin-left: 5px;
   margin-right: 5px;
   flex: 0 1 100%;
   grid-column: 1 / -1;
 }
 
-.gallery > * {
+.gallery>* {
   background-color: #fff;
   color: #000;
   border-radius: 5px;
@@ -279,7 +273,7 @@ gallery
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   color: white;
@@ -312,7 +306,6 @@ gallery
   background-position: -40px;
 }
 
-
 .g {
   background: url('https://images.pexels.com/photos/373964/pexels-photo-373964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-position: -100px;
@@ -332,21 +325,136 @@ gallery
 }
 
 .panel div {
-  background: rgba(0,0,0,.3);
+  background: rgba(0, 0, 0, .3);
   padding: 5px;
   color: white;
 }
 
 .panel:hover {
   transform: scale(1.01) translateY(-5px) rotateX(10deg) rotateY(2deg) skewY(4deg);
-  box-shadow: 1px 4px 9px rgba(0,0,0,.5);
+  box-shadow: 1px 4px 9px rgba(0, 0, 0, .5);
   z-index: 3;
 }
 
-/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+/****************
+subscribe 2
+****************/
+.subscribe-2 {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://images.pexels.com/photos/450059/pexels-photo-450059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 
+/**********
+testimonials
+**********/
+.testimonials {
+  margin-top: -2rem;
+  height: 80vh;
+  width: 100%;
+  background: #ecf0f1;
+}
+
+.testi-title {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.tests {
+  position: absolute;
+  width: 300%;
+  display: flex;
+  transition: all 400ms;
+}
+
+.tests.first {
+  right: -200%;
+}
+
+.tests.second {
+  right: -100%;
+}
+
+.tests.third {
+  right: 0%;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.test1 {
+  position: absolute;
+  left: 0;
+}
+
+.test2 {
+  position: absolute;
+  left: 33%;
+}
+
+.test3 {
+  position: absolute;
+  left: 66%;
+}
+
+.testi-image {
+  border: solid 8px white;
+  border-radius: 50%;
+  height: 272px;
+  width: 272px;
+}
+
+.testi-quote {
+  margin-top: 1rem;
+  border: solid 15px white;
+  border-radius: 2px;
+  background: white;
+}
+
+.testi-quote p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.dots {
+  align-self: baseline;
+  margin-top: 28rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dot {
+  border: solid 1px black;
+  border-radius: 100%;
+  height: 8px;
+  width: 8px;
+  margin-right: 1rem;
+  transition: all 200ms;
+}
+
+.dot:hover {
+  background: black;
+}
+
+/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
 @supports (display: grid) {
-  .gallery > * {
+  .gallery>* {
     margin: 0;
   }
 }

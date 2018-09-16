@@ -1,46 +1,41 @@
 body {
   margin: 0;
   -webkit-font-smoothing: subpixel-antialiased;
-  /*If you don't have this, add it in! */
   overflow-x: hidden;
 }
+
 
 /*******
 Popup
 ********/
+
+
 @keyframes hop-down {
   0% {
     transform: scale(.1) translateY(200px);
   }
 
+
   100% {
-    transform: scale(1) translateY(0px;
-    );
+    transform: scale(1) translateY(0px;);
   }
+
 }
 
 .pop-up-layer {
   opacity: 0%;
-  display: none;
-  /*we will change this with javascript*/
+  display: none; /*we will change this with javascript*/
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: rgba(44, 62, 80, .6);
-  /*this is our overlay color*/
-  z-index: 100;
-  /*makes our layer above the rest of the page.*/
+  background: rgba(44, 62, 80,.6); /*this is our overlay color*/
+  z-index: 100; /*makes our layer above the rest of the page.*/
 }
 
 .pop-up {
-  position: fixed;
-  /*this makes our pop-up attached to the screen*/
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  /*aligns our popup to the center*/
+  position: fixed; /*this makes our pop-up attached to the screen*/
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto; /*aligns our popup to the center*/
   height: 15rem;
   width: 40rem;
   display: flex;
@@ -49,9 +44,8 @@ Popup
   align-items: center;
   background: #2c3e50;
   border-radius: 16px;
-  box-shadow: 0 4px 3px rgba(0, 0, 0, .3);
-  z-index: 10000000;
-  /*Makes our pop-up above everything*/
+  box-shadow: 0 4px 3px rgba(0,0,0,.3);
+  z-index: 10000000; /*Makes our pop-up above everything*/
   animation: hop-down;
   animation-duration: 100ms;
   animation-fill-mode: both;
@@ -85,10 +79,8 @@ Popup
 
 .close-btn {
   position: absolute;
-  top: 0;
-  /* we put this button at */
-  right: 0rem;
-  /* the top right */
+  top: 0;        /* we put this button at */
+  right: 0rem;    /* the top right */
   margin-top: 0rem;
   background: #e74c3c;
   color: white;
@@ -108,14 +100,13 @@ Popup
   background: #c0392b;
 }
 
-/***********
+/*******************
 NAVBAR
-***********/
+*******************/
 
 .nav-bar {
   z-index: 10;
   width: 100%;
-  box-shadow: 0px 0px 1px rgba(0,0,0,.3);
 }
 
 .nav-links {
@@ -126,9 +117,10 @@ NAVBAR
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  font-family: roboto; /*made font-family roboto*/
 }
 
-.nav-btn {
+li.nav-btn {
   text-decoration: none;
   list-style-type: none;
   color: black;
@@ -149,7 +141,7 @@ NAVBAR
 }
 
 .nav-btn.right {
-  margin-left: 85%;
+  margin-left: 80%; /*made this smaller*/
   transition: all 300ms;
 }
 
@@ -161,12 +153,17 @@ NAVBAR
 /*******************
 HERO
 *******************/
+
 .hero {
   height: calc(99vh - 50px);
   width: 100%;
-  background: linear-gradient(rgba(44, 62, 80, .3), rgba(44, 62, 80, .3)), url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(44, 62, 80,.3), rgba(44, 62, 80,.3)), url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.hero {
+  /*you already have these*/
 }
 
 .hero-overlay-text {
@@ -198,17 +195,18 @@ HERO
   width: 15rem;
   text-align: center;
   transition: all 200ms;
-  box-shadow: 0 2px 0px rgba(0, 0, 0, .3);
+  box-shadow: 0 2px 0px rgba(0,0,0,.3);
 }
 
 .call-to-action-btn:hover {
   /*transform: scale(1.02);*/
-  box-shadow: 0 2px 1px rgba(0, 0, 0, .3);
+  box-shadow: 0 2px 1px rgba(0,0,0,.3);
 }
 
 /*******************
 clients
 *******************/
+
 .clients {
   height: 10rem;
   width: 100%;
@@ -243,10 +241,11 @@ clients
 /******************
 subscribe
 ******************/
+
 .subscribe {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -258,21 +257,21 @@ subscribe
 }
 
 .subscribe h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-family: roboto;
-  font-weight: 300;
-}
+   font-size: 3rem;
+   margin-bottom: 1rem;
+   font-family: roboto;
+   font-weight: 300;
+ }
 
-.subscribe h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-family: roboto;
-  font-weight: 200;
-}
+ .subscribe h3 {
+   margin: 0;
+   font-size: 1.5rem;
+   margin-bottom: 1rem;
+   font-family: roboto;
+   font-weight: 200;
+ }
 
-.email-input {
+ .email-input {
   border-radius: 4px;
   border: solid 1px gray;
   font-size: 2rem;
@@ -307,6 +306,8 @@ subscribe
 /*******************
 gallery
 *******************/
+
+
 .gallery-sec {
   /*padding: .3rem;*/
   margin-right: .3rem;
@@ -348,25 +349,32 @@ gallery
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  box-shadow: 1px 2px 6px rgba(0, 0, 0, .3);
+  box-shadow: 1px 2px 6px rgba(0,0,0,.3);
   transition: all 300ms;
   transform-style: preserve-3d;
   background-size: cover;
   background-position: center;
 }
 
+.panel:hover {
+  transform: scale(1.01) translateY(-5px) rotateX(10deg) rotateY(2deg) skewY(4deg);
+  box-shadow: 1px 4px 9px rgba(0,0,0,.5);
+  z-index: 3;
+}
+
 .tall-panel {
   grid-row-end: span 2;
 }
 
-.g-header {
+.g-header
+ {
   margin-left: 5px;
   margin-right: 5px;
   flex: 0 1 100%;
   grid-column: 1 / -1;
 }
 
-.gallery>* {
+.gallery > * {
   background-color: #fff;
   color: #000;
   border-radius: 5px;
@@ -380,7 +388,7 @@ gallery
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   color: white;
@@ -413,6 +421,7 @@ gallery
   background-position: -40px;
 }
 
+
 .g {
   background: url('https://images.pexels.com/photos/373964/pexels-photo-373964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-position: -100px;
@@ -432,24 +441,27 @@ gallery
 }
 
 .panel div {
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0,0,0,.3);
   padding: 5px;
   color: white;
 }
 
-.panel:hover {
-  transform: scale(1.01) translateY(-5px) rotateX(10deg) rotateY(2deg) skewY(4deg);
-  box-shadow: 1px 4px 9px rgba(0, 0, 0, .5);
-  z-index: 3;
+/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+
+@supports (display: grid) {
+  .gallery > * {
+    margin: 0;
+  }
 }
 
 /****************
 subscribe 2
 ****************/
+
 .subscribe-2 {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://images.pexels.com/photos/450059/pexels-photo-450059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://images.pexels.com/photos/450059/pexels-photo-450059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -463,6 +475,7 @@ subscribe 2
 /**********
 testimonials
 **********/
+
 .testimonials {
   margin-top: -2rem;
   height: 80vh;
@@ -494,6 +507,7 @@ testimonials
   right: 0%;
 }
 
+
 .testimonial {
   display: flex;
   flex-direction: column;
@@ -516,6 +530,7 @@ testimonials
   position: absolute;
   left: 66%;
 }
+
 
 .testi-image {
   border: solid 8px white;
@@ -549,8 +564,7 @@ testimonials
 .dot {
   border: solid 1px black;
   border-radius: 100%;
-  height: 8px;
-  width: 8px;
+  height: 8px; width: 8px;
   margin-right: 1rem;
   transition: all 200ms;
 }
@@ -559,10 +573,15 @@ testimonials
   background: black;
 }
 
+
+/****************
+subscribe 3
+****************/
+
 .subscribe-3 {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://images.pexels.com/photos/631986/pexels-photo-631986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('https://images.pexels.com/photos/631986/pexels-photo-631986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -576,6 +595,8 @@ testimonials
 /**********
 faqpanel
 ************/
+
+
 .faq {
   width: 100%;
   background: white;
@@ -593,50 +614,50 @@ faqpanel
   width: 60%;
 }
 
+
 .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-  font-weight: 600;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-weight: 600;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .faqpanel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 .accordion:after {
-  content: '\02795';
-  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
 }
 
 .active:after {
-  content: "\2796";
-  /* Unicode character for "minus" sign (-) */
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /**************
 Footer
 **************/
+
 .footer {
   height: 30vh;
   margin: 0;
@@ -676,6 +697,7 @@ h3 {
   list-style: none;
 }
 
+
 .footer-links a {
   text-decoration: none;
   color: white;
@@ -699,11 +721,4 @@ h3 {
 
 .more-links {
   cursor: pointer;
-}
-
-/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
-@supports (display: grid) {
-  .gallery>* {
-    margin: 0;
-  }
 }

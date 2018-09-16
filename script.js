@@ -8,9 +8,9 @@ const next = document.getElementById('next');
 const prev = document.getElementById('prev');
 
 //individual testimonials
-const testi1 = document.querySelector('.testi1');
-const testi2 = document.querySelector('.testi2');
-const testi3 = document.querySelector('.testi3')
+const testi1 = document.querySelector('.testi-1');
+const testi2 = document.querySelector('.testi-2');
+const testi3 = document.querySelector('.testi-3')
 
 //testimonial parent container
 const tests = document.querySelector('.tests');
@@ -25,6 +25,7 @@ let nextNextInt = window.setInterval(function() {
   }
 
 }, 4000)
+
 
 let nextint = window.setInterval(function() {
   //check for and remove first class
@@ -72,6 +73,7 @@ next.addEventListener("click", function() {
 //third dot click
 nextNext.addEventListener("click", function() {
 
+
   if (tests.classList.contains('second')) {
     tests.classList.remove('second');
   }
@@ -104,7 +106,9 @@ prev.addEventListener("click", function() {
 })
 
 ////////////////// end of testimonial section
+
 /////////////FAQ accordion section///////////////
+
 
 //delcare default vars
 const acc = document.getElementsByClassName("accordion");
@@ -117,10 +121,12 @@ for (let i = 0; i < acc.length; i++) {
 
     //add in the active class
     this.classList.toggle("active");
+
     //select sibling element
     let panel = this.nextElementSibling;
+
     //if sibling is open, close it, if closed, open it
-    if (panel.style.maxHeight) {
+    if (panel.style.maxHeight){
       //panel is open open
       panel.style.maxHeight = null;
 
@@ -130,6 +136,7 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
 /////////popup//////////////
 
 //declare default vars
@@ -158,6 +165,6 @@ let popUpFun = window.setInterval(function() {
 
   window.clearInterval(popUpFun);
 
-}, popUpSeconds * 1000);
+}, popUpSeconds * 10000); // 10 seconds till automatic pop up
 
 ///////////////////
